@@ -40,7 +40,7 @@ copy libcrypto.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc20
 copy libssl.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2008\Win32_Release\ssleay32.lib /y
 
 mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2008\
-copy C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2008\Win32_Release\include\openssl\* C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2008\ /y
+copy C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2008\Win32_Release\include\openssl\*.h C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2008\ /y
 del C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2008\__DECC_INCLUDE_EPILOGUE.H
 del C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2008\__DECC_INCLUDE_PROLOGUE.H
 
