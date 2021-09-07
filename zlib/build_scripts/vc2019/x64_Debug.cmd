@@ -1,4 +1,4 @@
-cd /d C:\git\SE-Build-crosslib_win32\zlib\src\build\vc2019\x64_Debug
+cd /d C:\git\SE-Build-crosslib_win32_v2\zlib\src\build\vc2019\x64_Debug
 
 set CYGWIN=nodosfilewarning
 set PATH=C:\Perl\bin;C:\ADMIN\nasm-2.11.08;%PATH%
@@ -15,8 +15,8 @@ nmake /f win32\Makefile.msc
 
 
 
-mkdir C:\git\SE-Build-crosslib_win32\zlib\output\Library\vc2019\x64_Debug
+mkdir C:\git\SE-Build-crosslib_win32_v2\zlib\output\Library\vc2019\x64_Debug
 
-copy zlib.lib C:\git\SE-Build-crosslib_win32\zlib\output\Library\vc2019\x64_Debug\ /y
+copy zlib.lib C:\git\SE-Build-crosslib_win32_v2\zlib\output\Library\vc2019\x64_Debug\ /y
 
 

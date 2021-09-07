@@ -1,4 +1,4 @@
-cd /d C:\git\SE-Build-crosslib_win32\OpenSSL\src\build\vc2005\Win32_Release
+cd /d C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2005\Win32_Release
 
 set CYGWIN=nodosfilewarning
 set PATH=C:\Strawberry\perl\bin;C:\ADMIN\nasm-2.11.08;%PATH%
@@ -33,14 +33,14 @@ copy /y crypto\include\internal\dso_conf.h crypto\include\internal\dso_conf.h.in
 nmake /f makefile clean
 nmake /f makefile
 
-mkdir C:\git\SE-Build-crosslib_win32\OpenSSL\output\Library\vc2005\Win32_Release
+mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2005\Win32_Release
 
-copy libcrypto.lib C:\git\SE-Build-crosslib_win32\OpenSSL\output\Library\vc2005\Win32_Release\libeay32.lib /y
-copy libssl.lib C:\git\SE-Build-crosslib_win32\OpenSSL\output\Library\vc2005\Win32_Release\ssleay32.lib /y
+copy libcrypto.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2005\Win32_Release\libeay32.lib /y
+copy libssl.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2005\Win32_Release\ssleay32.lib /y
 
-mkdir C:\git\SE-Build-crosslib_win32\OpenSSL\output\Include\vc2005\
-copy C:\git\SE-Build-crosslib_win32\OpenSSL\src\build\vc2005\Win32_Release\include\openssl\* C:\git\SE-Build-crosslib_win32\OpenSSL\output\Include\vc2005\ /y
-del C:\git\SE-Build-crosslib_win32\OpenSSL\output\Include\vc2005\__DECC_INCLUDE_EPILOGUE.H
-del C:\git\SE-Build-crosslib_win32\OpenSSL\output\Include\vc2005\__DECC_INCLUDE_PROLOGUE.H
+mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2005\
+copy C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2005\Win32_Release\include\openssl\* C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2005\ /y
+del C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2005\__DECC_INCLUDE_EPILOGUE.H
+del C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2005\__DECC_INCLUDE_PROLOGUE.H
 
 

@@ -1,4 +1,4 @@
-cd /d C:\git\SE-Build-crosslib_win32\OpenSSL\src\build\vc2017\x64_Release
+cd /d C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2017\x64_Release
 
 set CYGWIN=nodosfilewarning
 set PATH=C:\Strawberry\perl\bin;C:\ADMIN\nasm-2.11.08;%PATH%
@@ -33,9 +33,9 @@ copy /y crypto\include\internal\dso_conf.h crypto\include\internal\dso_conf.h.in
 nmake /f makefile clean
 nmake /f makefile
 
-mkdir C:\git\SE-Build-crosslib_win32\OpenSSL\output\Library\vc2017\x64_Release
+mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2017\x64_Release
 
-copy libcrypto.lib C:\git\SE-Build-crosslib_win32\OpenSSL\output\Library\vc2017\x64_Release\libeay32.lib /y
-copy libssl.lib C:\git\SE-Build-crosslib_win32\OpenSSL\output\Library\vc2017\x64_Release\ssleay32.lib /y
+copy libcrypto.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2017\x64_Release\libeay32.lib /y
+copy libssl.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2017\x64_Release\ssleay32.lib /y
 
 

@@ -1,4 +1,4 @@
-cd /d C:\git\SE-Build-crosslib_win32\zlib\src\build\vc2008\Win32_Release
+cd /d C:\git\SE-Build-crosslib_win32_v2\zlib\src\build\vc2008\Win32_Release
 
 set CYGWIN=nodosfilewarning
 set PATH=C:\Perl\bin;C:\ADMIN\nasm-2.11.08;%PATH%
@@ -15,14 +15,14 @@ nmake /f win32\Makefile.msc
 
 
 
-mkdir C:\git\SE-Build-crosslib_win32\zlib\output\Library\vc2008\Win32_Release
+mkdir C:\git\SE-Build-crosslib_win32_v2\zlib\output\Library\vc2008\Win32_Release
 
-copy zlib.lib C:\git\SE-Build-crosslib_win32\zlib\output\Library\vc2008\Win32_Release\ /y
+copy zlib.lib C:\git\SE-Build-crosslib_win32_v2\zlib\output\Library\vc2008\Win32_Release\ /y
 
-mkdir C:\git\SE-Build-crosslib_win32\zlib\output\Include\vc2008\
+mkdir C:\git\SE-Build-crosslib_win32_v2\zlib\output\Include\vc2008\
 
-copy C:\git\SE-Build-crosslib_win32\zlib\src\build\vc2008\Win32_Release\zconf.h C:\git\SE-Build-crosslib_win32\zlib\output\Include\vc2008\ /y
+copy C:\git\SE-Build-crosslib_win32_v2\zlib\src\build\vc2008\Win32_Release\zconf.h C:\git\SE-Build-crosslib_win32_v2\zlib\output\Include\vc2008\ /y
 
-copy C:\git\SE-Build-crosslib_win32\zlib\src\build\vc2008\Win32_Release\zlib.h C:\git\SE-Build-crosslib_win32\zlib\output\Include\vc2008\ /y
+copy C:\git\SE-Build-crosslib_win32_v2\zlib\src\build\vc2008\Win32_Release\zlib.h C:\git\SE-Build-crosslib_win32_v2\zlib\output\Include\vc2008\ /y
 
 
