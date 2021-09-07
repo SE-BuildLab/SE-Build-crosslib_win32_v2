@@ -5,9 +5,10 @@ set PATH=C:\Strawberry\perl\bin;C:\ADMIN\nasm-2.11.08;%PATH%
 
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
 
-perl Configure --release VC-WIN32 no-engine no-shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method no-async
+perl Configure --release VC-WIN32 no-engine no-shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method no-async no-tests
 
 perl -i.bak -p -e "s/_WIN32_WINNT \>\= 0x0600/_WIN32_WINNT \>\= 0xFFFF/g" crypto\rand\rand_win.c
+perl -i.bak -p -e "s/_WIN32_WINNT \>\= 0x600/_WIN32_WINNT \>\= 0xFFFF/g" crypto\threads_win.c
 
 perl -i.bak -p -e "s/\/MDd/\/MT/g" makefile
 perl -i.bak -p -e "s/\/MTd/\/MT/g" makefile
@@ -39,7 +40,7 @@ copy libcrypto.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc20
 copy libssl.lib C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2019\Win32_Release\ssleay32.lib /y
 
 mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2019\
-copy C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2019\Win32_Release\include\openssl\* C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2019\ /y
+copy C:\git\SE-Build-crosslib_win32_v2\OpenSSL\src\build\vc2019\Win32_Release\include\openssl\*.h C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2019\ /y
 del C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2019\__DECC_INCLUDE_EPILOGUE.H
 del C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Include\vc2019\__DECC_INCLUDE_PROLOGUE.H
 
