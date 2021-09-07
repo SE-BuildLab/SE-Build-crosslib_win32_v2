@@ -31,6 +31,13 @@ echo #endif>> crypto\include\internal\dso_conf.h
 
 copy /y crypto\include\internal\dso_conf.h crypto\include\internal\dso_conf.h.in
 
+
+rem --- Win32 VC2005 lacks of InterlockedOr64 ---
+
+perl -i.bak -p -e "s/\*ret = \(uint64_t\)InterlockedOr64\(\(LONG64 volatile \*\)val\, \(LONG64\)op\) \| op\;/\*val \|\= op\;\*ret  \= \*val\;/g" crypto\threads_win.c
+perl -i.bak -p -e "s/\*ret \= \(uint64_t\)InterlockedOr64\(\(LONG64 volatile \*\)val, 0\)\;/\*ret  \= \*val\;/g" crypto\threads_win.c
+
+
 nmake /f makefile clean
 nmake /f makefile
 
