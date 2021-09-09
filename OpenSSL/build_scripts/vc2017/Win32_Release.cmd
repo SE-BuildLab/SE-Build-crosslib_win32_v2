@@ -5,7 +5,10 @@ set PATH=C:\Strawberry\perl\bin;C:\ADMIN\nasm-2.11.08;%PATH%
 
 call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
 
-perl Configure --release VC-WIN32 -static no-engine no-shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method no-async no-tests
+REM -- force enable threads --
+perl -i.bak -p -e "s/unless\(\$disabled\{threads\}\) \{/if \(1\) \{/g" ./Configure
+
+perl Configure --release VC-WIN32 -static threads no-engine no-shared enable-weak-ssl-ciphers enable-ssl3 enable-ssl3-method no-async no-tests
 
 perl -i.bak -p -e "s/_WIN32_WINNT \>\= 0x0600/_WIN32_WINNT \>\= 0xFFFF/g" providers\implementations\rands\seeding\rand_win.c
 perl -i.bak -p -e "s/_WIN32_WINNT \>\= 0x600/_WIN32_WINNT \>\= 0xFFFF/g" crypto\threads_win.c
