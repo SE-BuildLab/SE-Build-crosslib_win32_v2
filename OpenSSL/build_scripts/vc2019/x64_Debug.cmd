@@ -36,6 +36,7 @@ copy /y crypto\include\internal\dso_conf.h crypto\include\internal\dso_conf.h.in
 
 nmake /f makefile clean
 nmake /f makefile
+nmake /f makefile
 
 mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2019\x64_Debug
 

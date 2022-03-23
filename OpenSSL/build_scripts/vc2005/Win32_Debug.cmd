@@ -43,6 +43,7 @@ perl -i.bak -p -e "s/\*ret \= \(uint64_t\)InterlockedOr64\(\(LONG64 volatile \*\
 
 nmake /f makefile clean
 nmake /f makefile
+nmake /f makefile
 
 mkdir C:\git\SE-Build-crosslib_win32_v2\OpenSSL\output\Library\vc2005\Win32_Debug
 
