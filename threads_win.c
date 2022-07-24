@@ -205,7 +205,7 @@ int CRYPTO_atomic_add(int *val, int amount, int *ret, CRYPTO_RWLOCK *lock)
 }
 
 int CRYPTO_atomic_or(uint64_t *val, uint64_t op, uint64_t *ret,
-                     CRYPTO_RWLOCK *lock)
+	CRYPTO_RWLOCK *lock)
 {
 #if (defined(_MSC_VER) && defined(_M_IX86) && _MSC_VER <= 1500)
     // VC++ 2008 or earlier x86 compilers do not have an inline implementation of InterlockedOr64 for 32bit and will fail to run on Windows XP 32bit.
